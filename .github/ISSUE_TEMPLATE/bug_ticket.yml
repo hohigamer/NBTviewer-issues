@@ -1,0 +1,43 @@
+name: Bug ticket
+description: Report a bug or crash
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: input
+    id: mc-version
+    attributes:
+      label: Minecraft version
+      placeholder: "ex: 1.21.11"
+    validations:
+      required: true
+  - type: dropdown
+    id: loader
+    attributes:
+      label: Loader
+      options:
+        - Fabric
+        - NeoForge
+    validations:
+      required: true
+  - type: input
+    id: mod-version
+    attributes:
+      label: NBTviewer version
+      placeholder: "ex: 2.0.0"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: What did you expect to happen instead? How can we reproduce it?
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log file
+      description: Drag and drop your `latest.log` (or crash report) directly into this box.
+      placeholder: Drag and drop the file here.
+    validations:
+      required: false
